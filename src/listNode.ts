@@ -17,10 +17,7 @@ export class ListNode {
 
   add(listToAdd: ListNode): ListNode {
     if (this.next === null && listToAdd.next === null) {
-      const valueAddition = this.value + listToAdd.value
-      if (valueAddition < 10) return new ListNode(this.value + listToAdd.value)
-
-      return new ListNode(valueAddition)
+      return new ListNode(this.value + listToAdd.value)
     }
 
     const a = this.next?.add(listToAdd.next ?? new ListNode(0)) ?? new ListNode(0)
