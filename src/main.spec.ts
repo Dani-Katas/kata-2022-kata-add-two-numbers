@@ -1,13 +1,6 @@
-import { describe, it, expect } from "vitest"
-// import { myFunction } from "./main.js"
-
-class ListNode {
-  constructor(number: number) {}
-}
-
-function addNumbers(l1: ListNode, l2: ListNode) {
-  return new ListNode(0)
-}
+import { describe, expect, it } from "vitest"
+import { ListNode } from "./listNode.js"
+import { addNumbers } from "./addNumbers.js"
 
 describe("add two numbers", () => {
   it("should work", () => {
