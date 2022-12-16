@@ -3,7 +3,7 @@ import { ListNode } from "./listNode.js"
 import { addNumbers } from "./addNumbers.js"
 
 describe("add two numbers", () => {
-  it("should work", () => {
+  it("returns zero with zero lists", () => {
     const l1 = new ListNode(0)
     const l2 = new ListNode(0)
 
@@ -19,5 +19,15 @@ describe("add two numbers", () => {
     const result: ListNode = addNumbers(l1, l2)
 
     expect(result).toEqual(new ListNode(4))
+  })
+
+  it("converts to two linked lists when the results is of two digits", () => {
+    const l1 = new ListNode(5)
+    const l2 = new ListNode(5)
+
+    const result: ListNode = addNumbers(l1, l2)
+
+    const expectedResult = new ListNode(0, new ListNode(1))
+    expect(result).toEqual(expectedResult)
   })
 })
