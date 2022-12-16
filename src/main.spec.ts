@@ -40,4 +40,14 @@ describe("add two numbers", () => {
     const expectedResult = new ListNode(0, new ListNode(2))
     expect(result).toEqual(expectedResult)
   })
+
+  it("adds two digit lists 2", () => {
+    const firstList = new ListNode(0, new ListNode(1))
+    const secondList = new ListNode(0, new ListNode(2))
+
+    const result: ListNode = addNumbers(firstList, secondList)
+
+    const expectedResult = new ListNode(0, new ListNode(3))
+    expect(result).toEqual(expectedResult)
+  })
 })
