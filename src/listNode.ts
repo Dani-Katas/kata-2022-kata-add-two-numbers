@@ -14,12 +14,13 @@ export class ListNode {
     return this.next ?? new ZeroNode()
   }
 
-  private hasNext() {
+  private isLastNode() {
     return this.next == null
   }
+
   add(listToAdd: ListNode): ListNode {
     const additionOfValues = this.value + listToAdd.value
-    if (this.hasNext() && listToAdd.hasNext()) {
+    if (this.isLastNode() && listToAdd.isLastNode()) {
       return new ListNode(additionOfValues)
     }
 
