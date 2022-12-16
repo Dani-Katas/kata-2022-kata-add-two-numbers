@@ -16,12 +16,13 @@ export class ListNode {
   }
 
   add(listToAdd: ListNode): ListNode {
+    const additionOfValues = this.value + listToAdd.value
     if (this.next === null && listToAdd.next === null) {
-      return new ListNode(this.value + listToAdd.value)
+      return new ListNode(additionOfValues)
     }
 
     const a = this.next?.add(listToAdd.next ?? new ListNode(0)) ?? new ListNode(0)
 
-    return new ListNode(0, a)
+    return new ListNode(additionOfValues, a)
   }
 }
