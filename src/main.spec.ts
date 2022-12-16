@@ -11,4 +11,13 @@ describe("add two numbers", () => {
 
     expect(result).toEqual(new ListNode(0))
   })
+
+  it("sums two one digit numbers", () => {
+    const l1 = new ListNode(3)
+    const l2 = new ListNode(1)
+
+    const result: ListNode = addNumbers(l1, l2)
+
+    expect(result).toEqual(new ListNode(4))
+  })
 })

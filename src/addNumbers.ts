@@ -1,5 +1,8 @@
 import { ListNode } from "./listNode.js"
 
-export function addNumbers(l1: ListNode, l2: ListNode) {
-  return new ListNode(0)
+export function addNumbers(firstList: ListNode, secondList: ListNode) {
+  const firstListValue = firstList.val
+  const secondListValue = secondList.val
+
+  return new ListNode(firstListValue + secondListValue)
 }
