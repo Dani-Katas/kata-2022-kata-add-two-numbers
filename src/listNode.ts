@@ -21,8 +21,12 @@ export class ListNode {
       return new ListNode(additionOfValues)
     }
 
-    const a = this.next?.add(listToAdd.next ?? new ListNode(0)) ?? new ListNode(0)
+    const a = this.next?.add(this.safeNext(listToAdd)) ?? new ListNode(0)
 
     return new ListNode(additionOfValues, a)
+  }
+
+  private safeNext(listToAdd: ListNode): ListNode {
+    return listToAdd.next ?? new ListNode(0)
   }
 }

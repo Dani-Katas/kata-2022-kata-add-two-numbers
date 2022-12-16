@@ -52,12 +52,12 @@ describe("add two numbers", () => {
   })
 
   it("adds lists with different number of digits", () => {
-    const firstList = new ListNode(0, new ListNode(1))
+    const firstList = new ListNode(0, new ListNode(1, new ListNode(2)))
     const secondList = new ListNode(1)
 
     const result: ListNode = addNumbers(firstList, secondList)
 
-    const expectedResult = new ListNode(1, new ListNode(1))
+    const expectedResult = new ListNode(1, new ListNode(1, new ListNode(2)))
     expect(result).toEqual(expectedResult)
   })
 })
