@@ -30,4 +30,14 @@ describe("add two numbers", () => {
     const expectedResult = new ListNode(0, new ListNode(1))
     expect(result).toEqual(expectedResult)
   })
+
+  it("converts to two linked lists when the results is of two digits 2", () => {
+    const l1 = new ListNode(6)
+    const l2 = new ListNode(5)
+
+    const result: ListNode = addNumbers(l1, l2)
+
+    const expectedResult = new ListNode(1, new ListNode(1))
+    expect(result).toEqual(expectedResult)
+  })
 })

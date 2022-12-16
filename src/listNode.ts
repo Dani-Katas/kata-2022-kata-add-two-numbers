@@ -7,6 +7,12 @@ export class ListNode {
   }
 
   add(listToAdd: ListNode): ListNode {
-    return new ListNode(this.value + listToAdd.value)
+    const valueAddition = this.value + listToAdd.value
+    if (valueAddition < 10) return new ListNode(this.value + listToAdd.value)
+
+    const valueAdditionString = String(valueAddition)
+    const secondDigitNumber = Number(valueAdditionString[1])
+    const firstDigitNumber = Number(valueAdditionString[0])
+    return new ListNode(secondDigitNumber, new ListNode(firstDigitNumber))
   }
 }
