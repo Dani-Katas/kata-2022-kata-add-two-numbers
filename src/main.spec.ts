@@ -12,7 +12,7 @@ describe("add two numbers", () => {
     expect(result).toEqual(new ListNode(0))
   })
 
-  it("sums two one digit numbers", () => {
+  it("sums two one digit lists", () => {
     const l1 = new ListNode(3)
     const l2 = new ListNode(1)
 
@@ -31,13 +31,13 @@ describe("add two numbers", () => {
     expect(result).toEqual(expectedResult)
   })
 
-  it("converts to two linked lists when the results is of two digits 2", () => {
-    const l1 = new ListNode(6)
-    const l2 = new ListNode(5)
+  it("adds two digit lists", () => {
+    const firstList = new ListNode(0, new ListNode(1))
+    const secondList = new ListNode(0, new ListNode(1))
 
-    const result: ListNode = addNumbers(l1, l2)
+    const result: ListNode = addNumbers(firstList, secondList)
 
-    const expectedResult = new ListNode(1, new ListNode(1))
+    const expectedResult = new ListNode(0, new ListNode(2))
     expect(result).toEqual(expectedResult)
   })
 })
