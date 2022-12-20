@@ -62,12 +62,12 @@ describe("add two numbers", () => {
   })
 
   it("adds lists with carry on on first digits", () => {
-    const firstList = new ListNode(2, new ListNode(4, new ListNode(3)))
-    const secondList = new ListNode(5, new ListNode(6, new ListNode(4)))
+    const firstList = new ListNode(6, new ListNode(1, new ListNode(2)))
+    const secondList = new ListNode(7, new ListNode(1, new ListNode(2)))
 
     const result: ListNode = addNumbers(firstList, secondList)
 
-    const expectedResult = new ListNode(7, new ListNode(0, new ListNode(8)))
+    const expectedResult = new ListNode(3, new ListNode(3, new ListNode(4)))
     expect(result).toEqual(expectedResult)
   })
 })
